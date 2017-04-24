@@ -12,6 +12,11 @@ describe(Triangle) do
       test_triangle = Triangle.new(1, 1, 1)
       expect(test_triangle.triangle?()).to(eq(true))
     end
+
+    it("returns false if any side contains a value of less than or equal to 0") do
+      test_triangle = Triangle.new(0, 1, 4)
+      expect(test_triangle.triangle?()).to(eq(false))
+    end
   end
 
   describe("#equilateral?") do
