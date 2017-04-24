@@ -19,6 +19,11 @@ describe(Triangle) do
       test_triangle = Triangle.new(2, 2, 2)
       expect(test_triangle.equilateral?()).to(eq(true))
     end
+
+    it("returns false if triangle is not an equilateral") do
+      test_triangle = Triangle.new(2, 2, 4)
+      expect(test_triangle.equilateral?()).to(eq(false))
+    end
   end
 end
 
