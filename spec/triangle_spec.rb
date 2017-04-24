@@ -37,6 +37,18 @@ describe(Triangle) do
       expect(test_triangle.isosceles?()).to(eq(false))
     end
   end
+
+  describe("#scalene?") do
+    it("returns true if triangle is not a scalene") do
+      test_triangle = Triangle.new(2, 2, 4)
+      expect(test_triangle.scalene?()).to(eq(false))
+    end
+
+    it("returns false if triangle is a scalene") do
+      test_triangle = Triangle.new(2, 3, 4)
+      expect(test_triangle.scalene?()).to(eq(true))
+    end
+  end
 end
 
 
